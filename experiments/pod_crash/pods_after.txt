@@ -1,0 +1,4 @@
+NAME                    READY   STATUS    RESTARTS   AGE     IP            NODE       NOMINATED NODE   READINESS GATES
+myapp-6484f4cd5-6c9kh   1/1     Running   0          7m44s   10.244.0.19   minikube   <none>           <none>
+myapp-6484f4cd5-pcq5d   1/1     Running   0          66m     10.244.0.17   minikube   <none>           <none>
+myapp-6484f4cd5-v7zd6   1/1     Running   0          66m     10.244.0.18   minikube   <none>           <none>
