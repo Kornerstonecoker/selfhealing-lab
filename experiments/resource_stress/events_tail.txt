@@ -1,0 +1,16 @@
+LAST SEEN   TYPE      REASON                 OBJECT                 MESSAGE
+55m         Warning   BackOff                pod/stress-pod         Back-off restarting failed container stress in pod stress-pod_app(25dd8017-687c-468f-b37b-59b185e25164)
+53m         Normal    SuccessfulCreate       job/stress-job         Created pod: stress-job-s6wr9
+53m         Normal    Scheduled              pod/stress-job-s6wr9   Successfully assigned app/stress-job-s6wr9 to minikube
+53m         Normal    Pulling                pod/stress-job-s6wr9   Pulling image "polinux/stress"
+53m         Normal    Pulled                 pod/stress-job-s6wr9   Successfully pulled image "polinux/stress" in 1.178s (1.178s including waiting). Image size: 9744175 bytes.
+53m         Normal    Created                pod/stress-job-s6wr9   Created container stress
+53m         Warning   Failed                 pod/stress-job-s6wr9   Error: failed to start container "stress": Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: exec: "--cpu": executable file not found in $PATH: unknown
+53m         Warning   BackoffLimitExceeded   job/stress-job         Job has reached the specified backoff limit
+17m         Normal    Scheduled              pod/stress-job-vc7sc   Successfully assigned app/stress-job-vc7sc to minikube
+17m         Normal    SuccessfulCreate       job/stress-job         Created pod: stress-job-vc7sc
+17m         Normal    Pulling                pod/stress-job-vc7sc   Pulling image "polinux/stress"
+17m         Normal    Started                pod/stress-job-vc7sc   Started container stress
+17m         Normal    Created                pod/stress-job-vc7sc   Created container stress
+17m         Normal    Pulled                 pod/stress-job-vc7sc   Successfully pulled image "polinux/stress" in 1.229s (1.229s including waiting). Image size: 9744175 bytes.
+15m         Normal    Completed              job/stress-job         Job completed
