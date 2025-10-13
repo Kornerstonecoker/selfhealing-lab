@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-netem
+  namespace: app
+  labels:
+    app: myapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: hashicorp/http-echo:0.2.3
+        args: ["-text=ok"]
+        ports:
+        - containerPort: 5678
+        readinessProbe:
+          httpGet: { path: "/", port: 5678 }
+          initialDelaySeconds: 2
+          periodSeconds: 5
+        livenessProbe:
+          httpGet: { path: "/", port: 5678 }
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        resources:
+          requests: { cpu: "100m", memory: "128Mi" }
+          limits:   { cpu: "500m", memory: "256Mi" }
+      - name: netem
+        image: nicolaka/netshoot
+        securityContext:
+          capabilities:
+            add: ["NET_ADMIN"]
+        command: ["sh","-c"]
+        args:
+        - |
+          tc qdisc add dev eth0 root netem delay 200ms loss 1%;
+          sleep infinity

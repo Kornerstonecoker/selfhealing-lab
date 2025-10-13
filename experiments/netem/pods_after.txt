@@ -1,0 +1,4 @@
+NAME                               READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+myapp-toxiproxy-77496f8788-7bjjh   2/2     Running   0          21m   10.244.0.39   minikube   <none>           <none>
+myapp-toxiproxy-77496f8788-jhllh   2/2     Running   0          21m   10.244.0.40   minikube   <none>           <none>
+myapp-toxiproxy-77496f8788-q4xmg   2/2     Running   0          21m   10.244.0.38   minikube   <none>           <none>

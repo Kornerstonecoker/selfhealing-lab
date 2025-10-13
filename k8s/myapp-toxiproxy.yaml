@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-toxiproxy
+  namespace: app
+  labels:
+    app: myapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: hashicorp/http-echo:0.2.3
+        args: ["-text=ok", "-listen=:5679"]
+        ports:
+        - containerPort: 5679
+        readinessProbe:
+          httpGet: { path: "/", port: 5679 }
+          initialDelaySeconds: 2
+          periodSeconds: 5
+      - name: toxiproxy
+        image: ghcr.io/shopify/toxiproxy:2.9.0
+        ports:
+        - containerPort: 5678
+        - containerPort: 8474

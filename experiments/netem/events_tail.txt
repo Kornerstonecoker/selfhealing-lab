@@ -1,0 +1,60 @@
+29m         Normal    Created                  pod/myapp-toxiproxy-f88ff587-cnnjr      Created container myapp
+29m         Normal    Pulled                   pod/myapp-toxiproxy-f88ff587-cnnjr      Container image "hashicorp/http-echo:0.2.3" already present on machine
+29m         Normal    Pulling                  pod/myapp-toxiproxy-f88ff587-9dlqm      Pulling image "ghcr.io/shopify/toxiproxy:2.9.0"
+29m         Normal    Pulling                  pod/myapp-toxiproxy-f88ff587-922c5      Pulling image "ghcr.io/shopify/toxiproxy:2.9.0"
+29m         Normal    Started                  pod/myapp-toxiproxy-f88ff587-922c5      Started container myapp
+29m         Normal    Pulling                  pod/myapp-toxiproxy-f88ff587-cnnjr      Pulling image "ghcr.io/shopify/toxiproxy:2.9.0"
+29m         Normal    Started                  pod/myapp-toxiproxy-f88ff587-cnnjr      Started container myapp
+29m         Normal    Started                  pod/myapp-toxiproxy-f88ff587-9dlqm      Started container myapp
+28m         Normal    Created                  pod/myapp-toxiproxy-f88ff587-9dlqm      Created container toxiproxy
+29m         Normal    Pulled                   pod/myapp-toxiproxy-f88ff587-9dlqm      Successfully pulled image "ghcr.io/shopify/toxiproxy:2.9.0" in 4.043s (4.044s including waiting). Image size: 17105200 bytes.
+28m         Warning   FailedPostStartHook      pod/myapp-toxiproxy-f88ff587-9dlqm      PostStartHook failed
+28m         Normal    Started                  pod/myapp-toxiproxy-f88ff587-9dlqm      Started container toxiproxy
+27m         Normal    Created                  pod/myapp-toxiproxy-f88ff587-922c5      Created container toxiproxy
+28m         Normal    Killing                  pod/myapp-toxiproxy-f88ff587-9dlqm      FailedPostStartHook
+29m         Normal    Pulled                   pod/myapp-toxiproxy-f88ff587-922c5      Successfully pulled image "ghcr.io/shopify/toxiproxy:2.9.0" in 1.08s (5s including waiting). Image size: 17105200 bytes.
+28m         Normal    Pulled                   pod/myapp-toxiproxy-f88ff587-9dlqm      Container image "ghcr.io/shopify/toxiproxy:2.9.0" already present on machine
+28m         Normal    Killing                  pod/myapp-toxiproxy-f88ff587-922c5      FailedPostStartHook
+28m         Warning   FailedPostStartHook      pod/myapp-toxiproxy-f88ff587-922c5      PostStartHook failed
+28m         Normal    Created                  pod/myapp-toxiproxy-f88ff587-cnnjr      Created container toxiproxy
+29m         Normal    Pulled                   pod/myapp-toxiproxy-f88ff587-cnnjr      Successfully pulled image "ghcr.io/shopify/toxiproxy:2.9.0" in 2.549s (7.547s including waiting). Image size: 17105200 bytes.
+28m         Normal    Started                  pod/myapp-toxiproxy-f88ff587-922c5      Started container toxiproxy
+27m         Normal    Pulled                   pod/myapp-toxiproxy-f88ff587-922c5      Container image "ghcr.io/shopify/toxiproxy:2.9.0" already present on machine
+28m         Normal    Started                  pod/myapp-toxiproxy-f88ff587-cnnjr      Started container toxiproxy
+28m         Warning   FailedPostStartHook      pod/myapp-toxiproxy-f88ff587-cnnjr      PostStartHook failed
+28m         Normal    Killing                  pod/myapp-toxiproxy-f88ff587-cnnjr      FailedPostStartHook
+23m         Warning   BackOff                  pod/myapp-toxiproxy-f88ff587-9dlqm      Back-off restarting failed container toxiproxy in pod myapp-toxiproxy-f88ff587-9dlqm_app(ed2ae9a9-04a0-41e3-902f-403138957ac4)
+28m         Warning   Unhealthy                pod/myapp-netem-7565967b6b-sdfj5        Readiness probe failed: Get "http://10.244.0.32:5678/": dial tcp 10.244.0.32:5678: connect: connection refused
+28m         Normal    Pulled                   pod/myapp-toxiproxy-f88ff587-cnnjr      Container image "ghcr.io/shopify/toxiproxy:2.9.0" already present on machine
+28m         Warning   Unhealthy                pod/myapp-netem-7565967b6b-mqt9v        Readiness probe failed: Get "http://10.244.0.34:5678/": dial tcp 10.244.0.34:5678: connect: connection refused
+28m         Warning   Unhealthy                pod/myapp-netem-7565967b6b-9rpkx        Readiness probe failed: Get "http://10.244.0.33:5678/": dial tcp 10.244.0.33:5678: connect: connection refused
+28m         Warning   Unhealthy                pod/myapp-netem-7565967b6b-9rpkx        Readiness probe failed: Get "http://10.244.0.33:5678/": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+28m         Warning   Unhealthy                pod/myapp-netem-7565967b6b-mqt9v        Readiness probe failed: Get "http://10.244.0.34:5678/": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+28m         Warning   Unhealthy                pod/myapp-netem-7565967b6b-sdfj5        Readiness probe failed: Get "http://10.244.0.32:5678/": dial tcp 10.244.0.32:5678: i/o timeout (Client.Timeout exceeded while awaiting headers)
+23m         Warning   BackOff                  pod/myapp-toxiproxy-f88ff587-cnnjr      Back-off restarting failed container toxiproxy in pod myapp-toxiproxy-f88ff587-cnnjr_app(c110eb72-6580-47aa-b019-84d2c85fea56)
+23m         Warning   BackOff                  pod/myapp-toxiproxy-f88ff587-922c5      Back-off restarting failed container toxiproxy in pod myapp-toxiproxy-f88ff587-922c5_app(bffd5e77-d04d-4dff-8d14-666f98638eb1)
+21m         Normal    Scheduled                pod/myapp-toxiproxy-77496f8788-7bjjh    Successfully assigned app/myapp-toxiproxy-77496f8788-7bjjh to minikube
+21m         Normal    SuccessfulCreate         replicaset/myapp-toxiproxy-77496f8788   Created pod: myapp-toxiproxy-77496f8788-jhllh
+21m         Normal    SuccessfulCreate         replicaset/myapp-toxiproxy-77496f8788   Created pod: myapp-toxiproxy-77496f8788-7bjjh
+21m         Normal    SuccessfulCreate         replicaset/myapp-toxiproxy-77496f8788   Created pod: myapp-toxiproxy-77496f8788-q4xmg
+21m         Normal    Scheduled                pod/myapp-toxiproxy-77496f8788-q4xmg    Successfully assigned app/myapp-toxiproxy-77496f8788-q4xmg to minikube
+21m         Normal    ScalingReplicaSet        deployment/myapp-toxiproxy              Scaled up replica set myapp-toxiproxy-77496f8788 to 3
+21m         Normal    Scheduled                pod/myapp-toxiproxy-77496f8788-jhllh    Successfully assigned app/myapp-toxiproxy-77496f8788-jhllh to minikube
+21m         Normal    Created                  pod/myapp-toxiproxy-77496f8788-7bjjh    Created container myapp
+21m         Normal    Pulled                   pod/myapp-toxiproxy-77496f8788-q4xmg    Container image "hashicorp/http-echo:0.2.3" already present on machine
+21m         Normal    Pulled                   pod/myapp-toxiproxy-77496f8788-7bjjh    Container image "hashicorp/http-echo:0.2.3" already present on machine
+21m         Normal    Created                  pod/myapp-toxiproxy-77496f8788-jhllh    Created container myapp
+21m         Normal    Pulled                   pod/myapp-toxiproxy-77496f8788-jhllh    Container image "hashicorp/http-echo:0.2.3" already present on machine
+21m         Normal    Created                  pod/myapp-toxiproxy-77496f8788-q4xmg    Created container myapp
+21m         Normal    Pulled                   pod/myapp-toxiproxy-77496f8788-q4xmg    Container image "ghcr.io/shopify/toxiproxy:2.9.0" already present on machine
+21m         Normal    Started                  pod/myapp-toxiproxy-77496f8788-q4xmg    Started container myapp
+21m         Normal    Created                  pod/myapp-toxiproxy-77496f8788-q4xmg    Created container toxiproxy
+21m         Normal    Pulled                   pod/myapp-toxiproxy-77496f8788-7bjjh    Container image "ghcr.io/shopify/toxiproxy:2.9.0" already present on machine
+21m         Normal    Started                  pod/myapp-toxiproxy-77496f8788-jhllh    Started container myapp
+21m         Normal    Pulled                   pod/myapp-toxiproxy-77496f8788-jhllh    Container image "ghcr.io/shopify/toxiproxy:2.9.0" already present on machine
+21m         Normal    Started                  pod/myapp-toxiproxy-77496f8788-7bjjh    Started container myapp
+21m         Normal    Created                  pod/myapp-toxiproxy-77496f8788-7bjjh    Created container toxiproxy
+21m         Normal    Created                  pod/myapp-toxiproxy-77496f8788-jhllh    Created container toxiproxy
+21m         Normal    Started                  pod/myapp-toxiproxy-77496f8788-7bjjh    Started container toxiproxy
+21m         Normal    Started                  pod/myapp-toxiproxy-77496f8788-jhllh    Started container toxiproxy
+21m         Normal    Started                  pod/myapp-toxiproxy-77496f8788-q4xmg    Started container toxiproxy
