@@ -1,1 +1,2 @@
-RTO_seconds,465
+kill_ts,start_pod,start_ts,rto_s
+2025-11-05T11:57:18Z,myapp-cbb87fc66-t7rrq,2025-11-05T11:57:20Z,2

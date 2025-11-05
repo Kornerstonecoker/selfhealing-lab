@@ -1,0 +1,5 @@
+scenario,requests_per_sec,avg_latency_ms
+baseline,2991.92,21.54
+pod_crash,2720.30,23.07
+resource_stress,244.78,203.80
+netem,488.71,204.42
