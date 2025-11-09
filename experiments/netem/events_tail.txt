@@ -1,36 +1,45 @@
-LAST SEEN   TYPE      REASON                 OBJECT                                  MESSAGE
-14m         Normal    Scheduled              pod/stress-job-xh99l                    Successfully assigned app/stress-job-xh99l to minikube
-14m         Normal    SuccessfulCreate       job/stress-job                          Created pod: stress-job-xh99l
-14m         Normal    Pulling                pod/stress-job-xh99l                    Pulling image "polinux/stress"
-14m         Normal    Pulled                 pod/stress-job-xh99l                    Successfully pulled image "polinux/stress" in 1.896s (1.896s including waiting). Image size: 9744175 bytes.
-14m         Normal    Created                pod/stress-job-xh99l                    Created container stress
-14m         Warning   Failed                 pod/stress-job-xh99l                    Error: failed to start container "stress": Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: exec: "--cpu": executable file not found in $PATH: unknown
-14m         Warning   BackoffLimitExceeded   job/stress-job                          Job has reached the specified backoff limit
-5m1s        Normal    Killing                pod/myapp-6484f4cd5-wqm6d               Stopping container myapp
-5m1s        Normal    Killing                pod/myapp-6484f4cd5-kdfqz               Stopping container myapp
-5m          Normal    Scheduled              pod/myapp-toxiproxy-67f7ddc95b-vx924    Successfully assigned app/myapp-toxiproxy-67f7ddc95b-vx924 to minikube
-5m          Normal    SuccessfulCreate       replicaset/myapp-toxiproxy-67f7ddc95b   Created pod: myapp-toxiproxy-67f7ddc95b-zhvkl
-5m          Normal    Pulled                 pod/myapp-toxiproxy-67f7ddc95b-vx924    Container image "hashicorp/http-echo:0.2.3" already present on machine
-5m          Normal    Pulled                 pod/myapp-toxiproxy-67f7ddc95b-l986s    Container image "hashicorp/http-echo:0.2.3" already present on machine
-5m          Normal    Scheduled              pod/myapp-toxiproxy-67f7ddc95b-l986s    Successfully assigned app/myapp-toxiproxy-67f7ddc95b-l986s to minikube
-5m          Normal    Killing                pod/myapp-6484f4cd5-nwc5m               Stopping container myapp
-5m          Normal    ScalingReplicaSet      deployment/myapp-toxiproxy              Scaled up replica set myapp-toxiproxy-67f7ddc95b to 3
-5m          Normal    SuccessfulCreate       replicaset/myapp-toxiproxy-67f7ddc95b   Created pod: myapp-toxiproxy-67f7ddc95b-l986s
-5m          Normal    Scheduled              pod/myapp-toxiproxy-67f7ddc95b-zhvkl    Successfully assigned app/myapp-toxiproxy-67f7ddc95b-zhvkl to minikube
-5m          Normal    Pulled                 pod/myapp-toxiproxy-67f7ddc95b-zhvkl    Container image "hashicorp/http-echo:0.2.3" already present on machine
-5m          Normal    SuccessfulCreate       replicaset/myapp-toxiproxy-67f7ddc95b   Created pod: myapp-toxiproxy-67f7ddc95b-vx924
-4m59s       Normal    Created                pod/myapp-toxiproxy-67f7ddc95b-l986s    Created container toxiproxy
-4m59s       Normal    Pulled                 pod/myapp-toxiproxy-67f7ddc95b-zhvkl    Container image "ghcr.io/shopify/toxiproxy:2.9.0" already present on machine
-4m59s       Normal    Created                pod/myapp-toxiproxy-67f7ddc95b-zhvkl    Created container toxiproxy
-4m59s       Normal    Started                pod/myapp-toxiproxy-67f7ddc95b-zhvkl    Started container toxiproxy
-4m59s       Normal    Started                pod/myapp-toxiproxy-67f7ddc95b-zhvkl    Started container myapp
-4m59s       Normal    Created                pod/myapp-toxiproxy-67f7ddc95b-zhvkl    Created container myapp
-4m59s       Normal    Started                pod/myapp-toxiproxy-67f7ddc95b-vx924    Started container toxiproxy
-4m59s       Normal    Created                pod/myapp-toxiproxy-67f7ddc95b-vx924    Created container toxiproxy
-4m59s       Normal    Pulled                 pod/myapp-toxiproxy-67f7ddc95b-vx924    Container image "ghcr.io/shopify/toxiproxy:2.9.0" already present on machine
-4m59s       Normal    Started                pod/myapp-toxiproxy-67f7ddc95b-vx924    Started container myapp
-4m59s       Normal    Created                pod/myapp-toxiproxy-67f7ddc95b-vx924    Created container myapp
-4m59s       Normal    Started                pod/myapp-toxiproxy-67f7ddc95b-l986s    Started container toxiproxy
-4m59s       Normal    Pulled                 pod/myapp-toxiproxy-67f7ddc95b-l986s    Container image "ghcr.io/shopify/toxiproxy:2.9.0" already present on machine
-4m59s       Normal    Started                pod/myapp-toxiproxy-67f7ddc95b-l986s    Started container myapp
-4m59s       Normal    Created                pod/myapp-toxiproxy-67f7ddc95b-l986s    Created container myapp
+LAST SEEN   TYPE     REASON              OBJECT                        MESSAGE
+35m         Normal   Scheduled           pod/stress-job-wwxdr          Successfully assigned app/stress-job-wwxdr to ip-172-31-30-61.ec2.internal
+35m         Normal   SuccessfulCreate    job/stress-job                Created pod: stress-job-wwxdr
+35m         Normal   Pulling             pod/stress-job-wwxdr          Pulling image "polinux/stress"
+35m         Normal   Started             pod/stress-job-wwxdr          Started container stress
+35m         Normal   Created             pod/stress-job-wwxdr          Created container: stress
+35m         Normal   Pulled              pod/stress-job-wwxdr          Successfully pulled image "polinux/stress" in 893ms (893ms including waiting). Image size: 4041495 bytes.
+34m         Normal   Completed           job/stress-job                Job completed
+8m26s       Normal   ScalingReplicaSet   deployment/myapp              Scaled up replica set myapp-8ccb9c7b5 from 0 to 1
+8m26s       Normal   Scheduled           pod/myapp-8ccb9c7b5-rmhdn     Successfully assigned app/myapp-8ccb9c7b5-rmhdn to ip-172-31-30-61.ec2.internal
+8m26s       Normal   SuccessfulCreate    replicaset/myapp-8ccb9c7b5    Created pod: myapp-8ccb9c7b5-rmhdn
+8m25s       Normal   Started             pod/myapp-8ccb9c7b5-rmhdn     Started container toxiproxy
+8m25s       Normal   Created             pod/myapp-8ccb9c7b5-rmhdn     Created container: toxiproxy
+8m25s       Normal   Pulled              pod/myapp-8ccb9c7b5-rmhdn     Successfully pulled image "ghcr.io/shopify/toxiproxy:2.9.0" in 554ms (554ms including waiting). Image size: 6931457 bytes.
+8m25s       Normal   Pulling             pod/myapp-8ccb9c7b5-rmhdn     Pulling image "ghcr.io/shopify/toxiproxy:2.9.0"
+8m25s       Normal   Started             pod/myapp-8ccb9c7b5-rmhdn     Started container myapp
+8m25s       Normal   Created             pod/myapp-8ccb9c7b5-rmhdn     Created container: myapp
+8m25s       Normal   Pulled              pod/myapp-8ccb9c7b5-rmhdn     Container image "hashicorp/http-echo:0.2.3" already present on machine
+8m24s       Normal   ScalingReplicaSet   deployment/myapp              Scaled up replica set myapp-8ccb9c7b5 from 1 to 2
+8m23s       Normal   Scheduled           pod/myapp-8ccb9c7b5-pkgpc     Successfully assigned app/myapp-8ccb9c7b5-pkgpc to ip-172-31-30-61.ec2.internal
+8m24s       Normal   SuccessfulDelete    replicaset/myapp-764f78d654   Deleted pod: myapp-764f78d654-7297h
+8m24s       Normal   Killing             pod/myapp-764f78d654-7297h    Stopping container myapp
+8m24s       Normal   ScalingReplicaSet   deployment/myapp              Scaled down replica set myapp-764f78d654 from 3 to 2
+8m24s       Normal   SuccessfulCreate    replicaset/myapp-8ccb9c7b5    Created pod: myapp-8ccb9c7b5-pkgpc
+8m23s       Normal   SuccessfulCreate    replicaset/myapp-8ccb9c7b5    Created pod: myapp-8ccb9c7b5-m78n8
+8m23s       Normal   ScalingReplicaSet   deployment/myapp              Scaled down replica set myapp-764f78d654 from 2 to 1
+8m23s       Normal   Killing             pod/myapp-764f78d654-zf86z    Stopping container myapp
+8m23s       Normal   Started             pod/myapp-8ccb9c7b5-pkgpc     Started container toxiproxy
+8m23s       Normal   SuccessfulDelete    replicaset/myapp-764f78d654   Deleted pod: myapp-764f78d654-zf86z
+8m22s       Normal   Scheduled           pod/myapp-8ccb9c7b5-m78n8     Successfully assigned app/myapp-8ccb9c7b5-m78n8 to ip-172-31-30-61.ec2.internal
+8m23s       Normal   Created             pod/myapp-8ccb9c7b5-pkgpc     Created container: myapp
+8m23s       Normal   Created             pod/myapp-8ccb9c7b5-pkgpc     Created container: toxiproxy
+8m23s       Normal   ScalingReplicaSet   deployment/myapp              Scaled up replica set myapp-8ccb9c7b5 from 2 to 3
+8m23s       Normal   Started             pod/myapp-8ccb9c7b5-pkgpc     Started container myapp
+8m23s       Normal   Pulled              pod/myapp-8ccb9c7b5-pkgpc     Container image "ghcr.io/shopify/toxiproxy:2.9.0" already present on machine
+8m23s       Normal   Pulled              pod/myapp-8ccb9c7b5-pkgpc     Container image "hashicorp/http-echo:0.2.3" already present on machine
+8m22s       Normal   Created             pod/myapp-8ccb9c7b5-m78n8     Created container: myapp
+8m22s       Normal   ScalingReplicaSet   deployment/myapp              Scaled down replica set myapp-764f78d654 from 1 to 0
+8m22s       Normal   Pulled              pod/myapp-8ccb9c7b5-m78n8     Container image "hashicorp/http-echo:0.2.3" already present on machine
+8m22s       Normal   Started             pod/myapp-8ccb9c7b5-m78n8     Started container myapp
+8m22s       Normal   SuccessfulDelete    replicaset/myapp-764f78d654   Deleted pod: myapp-764f78d654-qhch4
+8m22s       Normal   Pulled              pod/myapp-8ccb9c7b5-m78n8     Container image "ghcr.io/shopify/toxiproxy:2.9.0" already present on machine
+8m22s       Normal   Created             pod/myapp-8ccb9c7b5-m78n8     Created container: toxiproxy
+8m22s       Normal   Started             pod/myapp-8ccb9c7b5-m78n8     Started container toxiproxy
+8m22s       Normal   Killing             pod/myapp-764f78d654-qhch4    Stopping container myapp

@@ -1,19 +1,34 @@
-LAST SEEN   TYPE     REASON             OBJECT                       MESSAGE
-55m         Normal   SandboxChanged     pod/myapp-6484f4cd5-wqm6d    Pod sandbox changed, it will be killed and re-created.
-55m         Normal   Started            pod/myapp-6484f4cd5-nwc5m    Started container myapp
-55m         Normal   Pulled             pod/myapp-6484f4cd5-bs87v    Container image "hashicorp/http-echo:0.2.3" already present on machine
-55m         Normal   Created            pod/myapp-6484f4cd5-bs87v    Created container myapp
-55m         Normal   Started            pod/myapp-6484f4cd5-bs87v    Started container myapp
-55m         Normal   SandboxChanged     pod/myapp-6484f4cd5-bs87v    Pod sandbox changed, it will be killed and re-created.
-55m         Normal   Started            pod/myapp-6484f4cd5-wqm6d    Started container myapp
-55m         Normal   Created            pod/myapp-6484f4cd5-wqm6d    Created container myapp
-55m         Normal   Pulled             pod/myapp-6484f4cd5-wqm6d    Container image "hashicorp/http-echo:0.2.3" already present on machine
-55m         Normal   SandboxChanged     pod/myapp-6484f4cd5-nwc5m    Pod sandbox changed, it will be killed and re-created.
-55m         Normal   Pulled             pod/myapp-6484f4cd5-nwc5m    Container image "hashicorp/http-echo:0.2.3" already present on machine
-55m         Normal   Created            pod/myapp-6484f4cd5-nwc5m    Created container myapp
-25m         Normal   Killing            pod/myapp-6484f4cd5-bs87v    Stopping container myapp
-25m         Normal   SuccessfulCreate   replicaset/myapp-6484f4cd5   Created pod: myapp-6484f4cd5-kdfqz
-25m         Normal   Scheduled          pod/myapp-6484f4cd5-kdfqz    Successfully assigned app/myapp-6484f4cd5-kdfqz to minikube
-25m         Normal   Created            pod/myapp-6484f4cd5-kdfqz    Created container myapp
-25m         Normal   Pulled             pod/myapp-6484f4cd5-kdfqz    Container image "hashicorp/http-echo:0.2.3" already present on machine
-25m         Normal   Started            pod/myapp-6484f4cd5-kdfqz    Started container myapp
+LAST SEEN   TYPE     REASON              OBJECT                        MESSAGE
+43m         Normal   Created             pod/myapp-764f78d654-lkxrs    Created container: myapp
+43m         Normal   SuccessfulCreate    replicaset/myapp-764f78d654   Created pod: myapp-764f78d654-lkxrs
+43m         Normal   ScalingReplicaSet   deployment/myapp              Scaled up replica set myapp-764f78d654 from 0 to 1
+43m         Normal   Started             pod/myapp-764f78d654-lkxrs    Started container myapp
+43m         Normal   Scheduled           pod/myapp-764f78d654-lkxrs    Successfully assigned app/myapp-764f78d654-lkxrs to ip-172-31-30-61.ec2.internal
+43m         Normal   Pulled              pod/myapp-764f78d654-lkxrs    Container image "hashicorp/http-echo:0.2.3" already present on machine
+43m         Normal   Pulled              pod/myapp-764f78d654-qhch4    Container image "hashicorp/http-echo:0.2.3" already present on machine
+43m         Normal   ScalingReplicaSet   deployment/myapp              Scaled up replica set myapp-764f78d654 from 1 to 2
+43m         Normal   ScalingReplicaSet   deployment/myapp              Scaled down replica set myapp-86779c6cfd from 3 to 2
+43m         Normal   Scheduled           pod/myapp-764f78d654-qhch4    Successfully assigned app/myapp-764f78d654-qhch4 to ip-172-31-30-61.ec2.internal
+43m         Normal   SuccessfulDelete    replicaset/myapp-86779c6cfd   Deleted pod: myapp-86779c6cfd-4v6gv
+43m         Normal   Created             pod/myapp-764f78d654-qhch4    Created container: myapp
+43m         Normal   Started             pod/myapp-764f78d654-qhch4    Started container myapp
+43m         Normal   Killing             pod/myapp-86779c6cfd-4v6gv    Stopping container myapp
+43m         Normal   SuccessfulCreate    replicaset/myapp-764f78d654   Created pod: myapp-764f78d654-qhch4
+43m         Normal   Created             pod/myapp-764f78d654-zf86z    Created container: myapp
+43m         Normal   ScalingReplicaSet   deployment/myapp              Scaled down replica set myapp-86779c6cfd from 2 to 1
+43m         Normal   ScalingReplicaSet   deployment/myapp              Scaled up replica set myapp-764f78d654 from 2 to 3
+43m         Normal   Pulled              pod/myapp-764f78d654-zf86z    Container image "hashicorp/http-echo:0.2.3" already present on machine
+43m         Normal   SuccessfulCreate    replicaset/myapp-764f78d654   Created pod: myapp-764f78d654-zf86z
+43m         Normal   SuccessfulDelete    replicaset/myapp-86779c6cfd   Deleted pod: myapp-86779c6cfd-9stqm
+43m         Normal   Scheduled           pod/myapp-764f78d654-zf86z    Successfully assigned app/myapp-764f78d654-zf86z to ip-172-31-30-61.ec2.internal
+43m         Normal   Killing             pod/myapp-86779c6cfd-9stqm    Stopping container myapp
+43m         Normal   Started             pod/myapp-764f78d654-zf86z    Started container myapp
+43m         Normal   Killing             pod/myapp-86779c6cfd-c89cc    Stopping container myapp
+43m         Normal   SuccessfulDelete    replicaset/myapp-86779c6cfd   Deleted pod: myapp-86779c6cfd-c89cc
+43m         Normal   ScalingReplicaSet   deployment/myapp              Scaled down replica set myapp-86779c6cfd from 1 to 0
+25m         Normal   SuccessfulCreate    replicaset/myapp-764f78d654   Created pod: myapp-764f78d654-7297h
+25m         Normal   Scheduled           pod/myapp-764f78d654-7297h    Successfully assigned app/myapp-764f78d654-7297h to ip-172-31-30-61.ec2.internal
+25m         Normal   Killing             pod/myapp-764f78d654-lkxrs    Stopping container myapp
+25m         Normal   Started             pod/myapp-764f78d654-7297h    Started container myapp
+25m         Normal   Created             pod/myapp-764f78d654-7297h    Created container: myapp
+25m         Normal   Pulled              pod/myapp-764f78d654-7297h    Container image "hashicorp/http-echo:0.2.3" already present on machine
